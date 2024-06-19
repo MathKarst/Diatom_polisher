@@ -2,10 +2,14 @@
 
 Guppy_basecaller -I fast5/ -s basecalled/ -r --device auto -q 0 --disable_qscore_filtering -c DNA_r10.4.1_400bps_sup.cfg --compress_fastq
 
+
+
+
 ####Demultiplexing#####
 
 guppy_barcoder -t 10 --device auto -i basecalled/ -s barcoded/ -r -q 0 --compress_fastq 
 
+(dorado basecaller hac,5mCG_5hmCG pod5s/ > calls.fastq --emit-fastq)
 
 ##### Long barcode #####
 
